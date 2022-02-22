@@ -1,0 +1,26 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-credit-management-master-reads-rmq-kube/SAP_API_Caller/caller.go#L114",
+	"function": "sap-api-integrations-credit-management-master-reads-rmq-kube/SAP_API_Caller.(*SAPAPICaller).CreditAccount",
+	"level": "INFO",
+	"message": [
+		{
+			"BusinessPartner": "10100005",
+			"CreditSegment": "1000",
+			"BusinessPartnerIsCritical": false,
+			"CreditAccountIsBlocked": false,
+			"CreditAccountBlockReason": "",
+			"CreditAccountResubmissionDate": "",
+			"CreditLimitAmount": "5.00",
+			"CreditLimitValidityEndDate": "",
+			"CreditLimitLastChangeDate": "",
+			"CreditLimitCalculatedAmount": "0.00",
+			"CreditLimitIsZero": false,
+			"CreditLimitRequestedAmount": "0.00",
+			"CrdtLmtIsReqdFrmAutomCalc": false,
+			"CreditLimitReqdValidityEndDate": "",
+			"CreditLimitRequestDate": "",
+			"CreditSegmentCurrency": "USD"
+		}
+	],
+	"time": "2022-01-27T22:02:09+09:00"
+}

@@ -1,0 +1,22 @@
+{
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-credit-management-master-reads-rmq-kube/SAP_API_Caller/caller.go#L58",
+	"function": "sap-api-integrations-credit-management-master-reads-rmq-kube/SAP_API_Caller.(*SAPAPICaller).BusinessPartner",
+	"level": "INFO",
+	"message": [
+		{
+			"BusinessPartner": "10100005",
+			"CrdtMgmtBusinessPartnerGroup": "0",
+			"CreditWorthinessScoreValue": "        0",
+			"CrdtWrthnssScoreValdtyEndDate": "",
+			"CrdtWorthinessScoreLastChgDate": "",
+			"CalcdCrdtWorthinessScoreValue": "",
+			"CreditRiskClass": "C",
+			"CalculatedCreditRiskClass": "",
+			"CreditRiskClassLastChangeDate": "",
+			"CreditCheckRule": "01",
+			"CreditScoreAndLimitCalcRule": "STANDARD",
+			"to_CreditMgmtAccountTP": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_CRDTMBUSINESSPARTNER/CreditMgmtBusinessPartner('10100005')/to_CreditMgmtAccountTP"
+		}
+	],
+	"time": "2022-01-27T22:02:41+09:00"
+}

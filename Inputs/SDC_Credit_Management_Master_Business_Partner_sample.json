@@ -1,0 +1,40 @@
+{
+	"connection_key": "response",
+	"result": true,
+	"redis_key": "abcdefg",
+	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+	"CreditManagementMaster": {
+		"BusinessPartner": "10100005",
+		"CrdtMgmtBusinessPartnerGroup": "",
+		"CreditWorthinessScoreValue": "",
+		"CrdtWrthnssScoreValdtyEndDate": "",
+		"CrdtWorthinessScoreLastChgDate": "",
+		"CalcdCrdtWorthinessScoreValue": "",
+		"CreditRiskClass": "",
+		"CalculatedCreditRiskClass": "",
+		"CreditRiskClassLastChangeDate": "",
+		"CreditCheckRule": "",
+		"CreditScoreAndLimitCalcRule": "",
+		"CreditAccount": {
+			"CreditSegment": "",
+			"BusinessPartnerIsCritical": null,
+			"CreditAccountIsBlocked": null,
+			"CreditAccountBlockReason": "",
+			"CreditAccountResubmissionDate": "",
+			"CreditLimitAmount": "",
+			"CreditLimitValidityEndDate": "",
+			"CreditLimitLastChangeDate": "",
+			"CreditLimitCalculatedAmount": "",
+			"CreditLimitIsZero": null,
+			"CreditLimitRequestedAmount": "",
+			"CrdtLmtIsReqdFrmAutomCalc": null,
+			"CreditLimitReqdValidityEndDate": "",
+			"CreditLimitRequestDate": "",
+			"CreditSegmentCurrency": ""
+		}
+	},
+	"api_schema": "CreditMgmtBusinessPartner",
+	"accepter": ["BusinessPartner"],
+	"business_partner_code": "10100005",
+	"deleted": false
+}
