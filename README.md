@@ -10,7 +10,12 @@ sap-api-integrations-credit-mgmt-master-reads-rmq-kube は、主にエッジコ�
 ・ エッジ Kubernetes （推奨）    
 ・ AION のリソース （推奨)    
 ・ OS: LinuxOS （必須）    
-・ CPU: ARM/AMD/Intel（いずれか必須） 
+・ CPU: ARM/AMD/Intel（いずれか必須）
+・ RabbitMQ on Kubernetes  
+・ RabbitMQ Client  
+
+## クラウド環境での利用  
+sap-api-integrations-credit-mgmt-master-reads-rmq-kube は、外部システムがクラウド環境である場合にSAPと統合するときにおいても、利用可能なように設計されています。  
 
 ## RabbitMQ からの JSON Input
 
@@ -43,9 +48,6 @@ kubectl apply - f 等で Deployment作成後、以下のコマンドで Pod が�
 $ kubectl get pods
 ```
 
-## クラウド環境での利用  
-sap-api-integrations-credit-mgmt-master-reads-rmq-kube は、外部システムがクラウド環境である場合にSAPと統合するときにおいても、利用可能なように設計されています。  
-
 ## 本レポジトリ が 対応する API サービス
 sap-api-integrations-credit-mgmt-master-reads-rmq-kube が対応する APIサービス は、次のものです。
 
@@ -55,16 +57,16 @@ sap-api-integrations-credit-mgmt-master-reads-rmq-kube が対応する APIサー
 ## 本レポジトリ に 含まれる API名
 sap-api-integrations-credit-mgmt-master-reads-rmq-kube には、次の API をコールするためのリソースが含まれています。  
 
-* CreditMgmtBusinessPartner（与信管理マスタ - ビジネスパートナ）※与信管理マスタの詳細データを取得するために、ToCreditAccount、と合わせて利用されます。
+* BusinessPartner（与信管理マスタ - ビジネスパートナ）※与信管理マスタの詳細データを取得するために、ToCreditAccount、と合わせて利用されます。
 * ToCreditAccount（与信管理マスタ - 与信アカウント ※To）
-* CreditmgmtAccount（与信管理マスタ - 与信アカウント）
+* CreditAccount（与信管理マスタ - 与信アカウント）
 
 ## API への 値入力条件 の 初期値
 sap-api-integrations-credit-mgmt-master-reads-rmq-kube において、API への値入力条件の初期値は、入力ファイルレイアウトの種別毎に、次の通りとなっています。  
 
 ### SDC レイアウト
 
-* inoutSDC.CreditmgmtMaster.BusinessPartner（ビジネスパートナ）
+* inoutSDC.CreditManagementMaster.BusinessPartner（ビジネスパートナ）
 
 ## SAP API Bussiness Hub の API の選択的コール
 
@@ -100,7 +102,7 @@ accepter における データ種別 の指定に基づいて SAP_API_Caller �
 caller.go の func() 毎 の 以下の箇所が、指定された API をコールするソースコードです。  
 
 ```
-func (c *SAPAPICaller) AsyncGetCreditmgmtMaster(businessPartner string, accepter []string) {
+func (c *SAPAPICaller) AsyncGetCreditManagementMaster(businessPartner string, accepter []string) {
 	wg := &sync.WaitGroup{}
 	wg.Add(len(accepter))
 	for _, fn := range accepter {
